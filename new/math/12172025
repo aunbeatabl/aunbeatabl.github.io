@@ -16,51 +16,30 @@
 <body>
 <div class="w3-container w3-hover-white w3-border-bottom" style="background-color: #f7f3dc;" >
 <!-- Title and header-->
-<h1 style="margin: 10.0px 0.0px 16.1px 0.0px; font: 27.0px Verdana; color: #032658"><span class="s1"><b>Coursework and Notes</b></span></h1>
+<h1 style="margin: 10.0px 0.0px 16.1px 0.0px; font: 27.0px Verdana; color: #032658"><span class="s1"><b>Typing some math</b></span></h1>
 <div class="center control-container" style="display: flex; ">
-  <a href="../index.html" class="button button1" style="margin: 0; color: black;">Home</a>
-  <a href="notes.html" class="button button1" style="margin: 0; color: black;">Coursework</a>
-  <a href="projects.html" class="button button1" style="margin: 0; color: black;">Projects</a>
-  <a href="experience.html" class="button button1" style="margin: 0; color: black;">Experience</a>
-  <a href="index.html" class="button button1" style="margin: 0; color: black;">NewPage</a>
+  <a href="../projects.html" class="button button1" style="margin: 0; color: black;">\(\leftarrow\)Back to projects</a>
 </div>
 </div>
 
 <br>
 <div class="w3-container" style="margin: 0px 325px 0px 15px;">
-<p class="p2"><span class="s1">Below is some of my selected Coursework and Notes from Berkeley.</span></p>
+<p class="p2"><span class="s1">Math</span></p>
 </div>
 
 <br>
-<div class="w3-container" style="margin: 0px 325px 0px 15px; background-color: white">
-<p class="p4"><span class="s1">Freshman Year</span></p>
+<div class="w3-container" style="margin: 0px 35px 0px 15px; background-color: white">
 <br>
-<p class="p2"><span class="s1">MUSA 174: Introduction to Category Theory</span></p>
-<p class="p5"><span class="s2"><a href="../Cat.pdf" target="_blank">Notes</a></span></p>
-<br>
-<p class="p2"><span class="s1">Math 55: Discrete Mathematics </span></p>
-<p class="p5"><span class="s2"><a href="../Discrete_Math_55_notes.pdf" target="_blank">Notes</a></span></p>
-<br>
-<p class="p2"><span class="s1">Math H185: Honors Complex Analysis</span></p>
-<p class="p5"><span class="s2"><a href="file:///Users/adrianfry/H104.F13/OrderedSets.pdf">Notes</a></span></p>
-<br>
-<p class="p2"><span class="s1">Math 142: Elementary Algebraic Topology</span></p>
-<p class="p5"><span class="s2"><a href="../142.pdf" target="_blank">Notes</a></span></p>
-<br>
-<p class="p2"><span class="s1">Math 113: Introduction to Abstract Algebra</span></p>
-<br>
-<p class="p2"><span class="s1">Math 110: Abstract Linear Algebra</span></p>
-</div>
+<p class="p2"><span class="s1">I had my analysis final today; this was a good problem: <br>
+Use Zorn's lemma to show that every real vector space has a basis.<br>
+This isn't a particularly difficult problem in the countable case, but Zorn's lemma is required to upgrade the condition to a vector space of arbitrarily large dimention. <br>  
+Let \(V\) be the vector space, and let \(A\) be a spanning set.  We can put a partial ordering on \(P = \{S \in \mathcal{P}(A) : S \text{ spans } V\}\), where \(R < S\) if \(R \supset S\). 
+By Zorn's lemma, the \(P\) must have a maximal element since it is bounded by \(4\)
 
 <br>
-<div class="w3-container" style="margin: 0px 325px 0px 15px; background-color: white">
-<p class="p4"><span class="s1">Sophomore Year</span></p>
+I totally missed this problem on the test because I didn't think to order the sets by inclusion, and instead I tried to order the vectors in \(A\).
+</span></p>
 <br>
-<p class="p2"><span class="s1">Math 202: Introduction to Analysis and Topology</span></p>
-<br>
-<p class="p2"><span class="s1">Math 214: Differential Topology</span></p>
 </div>
-<br>
-
 </body>
 </html>
