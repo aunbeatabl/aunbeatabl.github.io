@@ -32,16 +32,15 @@ This isn't a particularly difficult problem in the countable case, but Zorn's le
 <p> <i>Proof.</i>
 Let \(V\) denote the vector space, and let \(A\) be a spanning set.  We can put a partial ordering on \(P = \{S \in \mathcal{P}(A) : S \text{ spans } V\}\), where \(R < S\) if \(R \supset S\).
 In order to use Zorn's lemma, we need to show that \(P\) is bounded, i.e., for every chain of subsets \(S_1 < S_2 < \cdots\) there exists a subset \(Q \subset A\) for which \( Q > S_i\) for all 
-\(i\). In other words, \(Q \subset \bigcap_{i} S_i\) is nonempty.
-  
-Thus \(P\) must have a maximal element.
+\(i\). In other words, WTS \(Q \subset \bigcap_{i} S_i\) is nonempty.  But this is clear; if the intersection of a collection of sets where each set is contained in all the preceding terms is empty, 
+then one of the sets in the collection is empty.  But the empty set is not spanning, so \(P\) must have a maximal element.
 </p>
 <p>
 The maximal element of \(P\) is the smallest subset of \(A\) which is spanning.  If it wasn't linearly independent then there would exist some \(w \in P\) for which there exists a collection 
 \(\{v_i\}_{i \in \mathbb{N}_{\leq k}}\}\) for some integer \(k\) which doesn't include \(w\) for which \[\sum_{i=1}^k a_iv_i = w.\]
-But then \(P - \{w\}\) is larger than the maximal element which is a contradiction. 
+But then \(P - \{w\}\) is larger than the maximal element which is a contradiction. \(\square\)
 </p>
-I totally missed this problem on the test because I didn't think to order the sets by inclusion, and instead I tried to order the vectors in \(A\).
+I totally missed this problem on the test because I didn't think to order the sets by inclusion and instead I tried to order the vectors in \(A\).
 </span></p>
 <br>
 </div>
