@@ -23,21 +23,18 @@
 </div>
 
 <br>
-<div class="w3-container" style="margin: 0px 325px 0px 15px;">
-<p class="h2"><span class="s1">Math</span></p>
-</div>
-
-<br>
 <div class="w3-container" style="margin: 0px 35px 0px 15px; background-color: white">
 <br>
-<p class="p2"><span class="s1">I had my analysis final today; this was a good problem: <br>
-<b>Use Zorn's lemma to show that every real vector space has a basis.</b>
+<p class="p2"><span class="s1">I had my analysis final today; this was a good problem: <b>Use Zorn's lemma to show that every real vector space has a basis.</b>
 <p>
 This isn't a particularly difficult problem in the countable case, but Zorn's lemma is required to upgrade the condition to a vector space of arbitrarily large dimention.
 </p>
 <p> <i>Proof.</i>
-Let \(V\) denote the vector space, and let \(A\) be a spanning set.  We can put a partial ordering on \(P = \{S \in \mathcal{P}(A) : S \text{ spans } V\}\), where \(R < S\) if \(R \supset S\). 
-By Zorn's lemma, the \(P\) must have a maximal element since it is bounded by \(4\).
+Let \(V\) denote the vector space, and let \(A\) be a spanning set.  We can put a partial ordering on \(P = \{S \in \mathcal{P}(A) : S \text{ spans } V\}\), where \(R < S\) if \(R \supset S\).
+In order to use Zorn's lemma, we need to show that \(P\) is bounded, i.e., for every chain of subsets \(S_1 < S_2 < \cdots\) there exists a subset \(Q \subset A\) for which \( Q > S_i\) for all 
+\(i\). In other words, \(Q \subset \bigcap_{i} S_i\) is nonempty.
+  
+Thus \(P\) must have a maximal element.
 </p>
 <p>
 The maximal element of \(P\) is the smallest subset of \(A\) which is spanning.  If it wasn't linearly independent then there would exist some \(w \in P\) for which there exists a collection 
