@@ -33,14 +33,26 @@ I used the Mayer-Vietoris sequence to compute this.  Let \(U, V\) be open sets w
 So we have the following commutative diagram (turns out its really easy to make commutative diagrams in MathJax if you import it from q.uiver)
   <!-- https://q.uiver.app/#q=WzAsMTQsWzQsMCwiSF4wX3tkUn0oTSkiXSxbMiwwLCIwIl0sWzYsMCwiSF4wX3tkUn0oVSkgXFxvcGx1cyBIXjBfe2RSfShWKSJdLFs4LDAsIkheMF97ZFJ9KFUgXFxjYXAgVikiXSxbNCwyLCJIXjFfe2RSfShNKSJdLFs2LDIsIkheMV97ZFJ9KFUpIFxcb3BsdXMgSF4xX3tkUn0oVikiXSxbOCwyLCJIXjFfe2RSfShVIFxcY2FwIFYpIl0sWzQsNCwiSF4yX3tkUn0oTSkiXSxbNiw0LCJIXjJfe2RSfShVKSBcXG9wbHVzIEheMV97ZFJ9KFYpIl0sWzgsNCwiSF4yX3tkUn0oVSBcXGNhcCBWKSJdLFsxMCw0LCIwIl0sWzAsMV0sWzAsMCwiXFxidWxsZXQiXSxbMTIsNCwiXFxidWxsZXQiXSxbMSwwXSxbMCwyXSxbMiwzXSxbMyw0XSxbNCw1XSxbNSw2XSxbNiw3XSxbNyw4XSxbOCw5XSxbOSwxMF1d -->
 <iframe class="quiver-embed" src="https://q.uiver.app/#q=WzAsMTQsWzQsMCwiSF4wX3tkUn0oTSkiXSxbMiwwLCIwIl0sWzYsMCwiSF4wX3tkUn0oVSkgXFxvcGx1cyBIXjBfe2RSfShWKSJdLFs4LDAsIkheMF97ZFJ9KFUgXFxjYXAgVikiXSxbNCwyLCJIXjFfe2RSfShNKSJdLFs2LDIsIkheMV97ZFJ9KFUpIFxcb3BsdXMgSF4xX3tkUn0oVikiXSxbOCwyLCJIXjFfe2RSfShVIFxcY2FwIFYpIl0sWzQsNCwiSF4yX3tkUn0oTSkiXSxbNiw0LCJIXjJfe2RSfShVKSBcXG9wbHVzIEheMV97ZFJ9KFYpIl0sWzgsNCwiSF4yX3tkUn0oVSBcXGNhcCBWKSJdLFsxMCw0LCIwIl0sWzAsMV0sWzAsMCwiXFxidWxsZXQiXSxbMTIsNCwiXFxidWxsZXQiXSxbMSwwXSxbMCwyXSxbMiwzXSxbMyw0XSxbNCw1XSxbNSw2XSxbNiw3XSxbNyw4XSxbOCw5XSxbOSwxMF1d&embed" width=700" height="400" style="border-radius: 20px; border: none;"></iframe>
-</p><p>
+</p><p> 
 Since \( U \cap V\) is homotopic to \(\mathbb{R}\), we also have \(H^0_{dR}(U \cap V) = \mathbb{R},  H^1_{dR}(U \cap V) = 0, H^2_{dR}(U \cap V) = 0\).  By exactness, we now know that 
 \(H^2_{dR}(M) = 0\), since it is surrounded by zeros.
+</p><p>
+While I did find the correct de Rham cohomology groups during the exam using the following method, it is kind of sketchy.  I will post a better solution later.  This is what I did
+on the exam:
+</p><p>
+By de Rham's theorem, we know that by homotopy invariance \(H^1_{dR}(M) = H^1_{dR}(S^1 \vee S^1) = H_1(S^1 \vee S^1) = \mathbb{R}^2\).  Then we can dimension count to get \(H^0_{dR}(M)\),
+since it's dimension cannot be \(0\) or \(2\) be the information we know so far, so it must be isomorphic to \(\mathbb{R}\).  So we have:
+
+<!-- https://q.uiver.app/#q=WzAsMTMsWzQsMCwiXFxtYXRoYmJ7Un0iXSxbMiwwLCIwIl0sWzYsMCwiXFxtYXRoYmJ7Un1eMiJdLFs4LDAsIlxcbWF0aGJie1J9Il0sWzQsMiwiXFxtYXRoYmJ7Un1eMiJdLFs2LDIsIlxcbWF0aGJie1J9XjIiXSxbOCwyLCIwIl0sWzQsNCwiMCJdLFs2LDQsIjAiXSxbOCw0LCIwIl0sWzEwLDQsIjAiXSxbMTIsNCwiXFxidWxsZXQiXSxbMCwwLCJcXGJ1bGxldCJdLFsxLDBdLFswLDJdLFsyLDNdLFszLDRdLFs0LDVdLFs1LDZdLFs2LDddLFs3LDhdLFs4LDldLFs5LDEwXV0= -->
+<iframe class="quiver-embed" src="https://q.uiver.app/#q=WzAsMTMsWzQsMCwiXFxtYXRoYmJ7Un0iXSxbMiwwLCIwIl0sWzYsMCwiXFxtYXRoYmJ7Un1eMiJdLFs4LDAsIlxcbWF0aGJie1J9Il0sWzQsMiwiXFxtYXRoYmJ7Un1eMiJdLFs2LDIsIlxcbWF0aGJie1J9XjIiXSxbOCwyLCIwIl0sWzQsNCwiMCJdLFs2LDQsIjAiXSxbOCw0LCIwIl0sWzEwLDQsIjAiXSxbMTIsNCwiXFxidWxsZXQiXSxbMCwwLCJcXGJ1bGxldCJdLFsxLDBdLFswLDJdLFsyLDNdLFszLDRdLFs0LDVdLFs1LDZdLFs2LDddLFs3LDhdLFs4LDldLFs5LDEwXV0=&embed" width="700" height="400" style="border-radius: 20px; border: none;"></iframe>
+</p>
+<p>
+The issue with this is that de Rham cohomology is more than just the dimension of the real vector space, and finding what \(\mathbb{R}^k\) each \(H^l_{dR}(M)\) is isomorphic to isn't 
+really all of what is needed 
 </p>
 
-
-
-
+</span>
+</p>
 <br>
 </div>
 </body>
