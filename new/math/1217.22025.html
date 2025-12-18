@@ -27,12 +27,14 @@
 I'm mainly writing this to practice using MathJax. 
 </p><p>
 I used the Mayer-Vietoris sequence to compute this.  Let \(U, V\) be open sets which cover the manifold, where \(U\) contains \(p\) but not \(q\) and \(V\) contains \(q\) but not 
-\(p\).  This is nice because both \(U\) and \(V\) are homotopic to \(S^1\) which we already know the cohomologies of: \[H^k_{dR}(S^n) = \begin{cases} \mathbb{R} \text{ if }k = 0,
+\(p\), specifically so that their intersection is an open band.  This is nice because both \(U\) and \(V\) are homotopic to \(S^1\) which we already know the cohomologies of: \[H^k_{dR}(S^n) = \begin{cases} \mathbb{R} \text{ if }k = 0,
 n\\ 0 \text{ else } \end{cases}\]
 
 So we have the following commutative diagram (turns out its really easy to make commutative diagrams in MathJax if you import it from q.uiver)
-  <!-- https://q.uiver.app/#q=WzAsMTEsWzIsMCwiSF4wX3tkUn0oTSkiXSxbMCwwLCIwIl0sWzQsMCwiSF4wX3tkUn0oVSkgXFxvcGx1cyBIXjBfe2RSfShWKSJdLFs2LDAsIkheMF97ZFJ9KFUgXFxjYXAgVikiXSxbMiwyLCJIXjFfe2RSfShNKSJdLFs0LDIsIkheMV97ZFJ9KFUpIFxcb3BsdXMgSF4xX3tkUn0oVikiXSxbNiwyLCJIXjFfe2RSfShVIFxcY2FwIFYpIl0sWzIsNCwiSF4yX3tkUn0oTSkiXSxbNCw0LCJIXjJfe2RSfShVKSBcXG9wbHVzIEheMV97ZFJ9KFYpIl0sWzYsNCwiSF4yX3tkUn0oVSBcXGNhcCBWKSJdLFs4LDQsIjAiXSxbMSwwXSxbMCwyXSxbMiwzXSxbMyw0XSxbNCw1XSxbNSw2XSxbNiw3XSxbNyw4XSxbOCw5XSxbOSwxMF1d -->
-<iframe class="quiver-embed" src="https://q.uiver.app/#q=WzAsMTEsWzIsMCwiSF4wX3tkUn0oTSkiXSxbMCwwLCIwIl0sWzQsMCwiSF4wX3tkUn0oVSkgXFxvcGx1cyBIXjBfe2RSfShWKSJdLFs2LDAsIkheMF97ZFJ9KFUgXFxjYXAgVikiXSxbMiwyLCJIXjFfe2RSfShNKSJdLFs0LDIsIkheMV97ZFJ9KFUpIFxcb3BsdXMgSF4xX3tkUn0oVikiXSxbNiwyLCJIXjFfe2RSfShVIFxcY2FwIFYpIl0sWzIsNCwiSF4yX3tkUn0oTSkiXSxbNCw0LCJIXjJfe2RSfShVKSBcXG9wbHVzIEheMV97ZFJ9KFYpIl0sWzYsNCwiSF4yX3tkUn0oVSBcXGNhcCBWKSJdLFs4LDQsIjAiXSxbMSwwXSxbMCwyXSxbMiwzXSxbMyw0XSxbNCw1XSxbNSw2XSxbNiw3XSxbNyw4XSxbOCw5XSxbOSwxMF1d&embed" width="500" height="400" style="border-radius: 8px; border: none;"></iframe>
+  <!-- https://q.uiver.app/#q=WzAsMTQsWzQsMCwiSF4wX3tkUn0oTSkiXSxbMiwwLCIwIl0sWzYsMCwiSF4wX3tkUn0oVSkgXFxvcGx1cyBIXjBfe2RSfShWKSJdLFs4LDAsIkheMF97ZFJ9KFUgXFxjYXAgVikiXSxbNCwyLCJIXjFfe2RSfShNKSJdLFs2LDIsIkheMV97ZFJ9KFUpIFxcb3BsdXMgSF4xX3tkUn0oVikiXSxbOCwyLCJIXjFfe2RSfShVIFxcY2FwIFYpIl0sWzQsNCwiSF4yX3tkUn0oTSkiXSxbNiw0LCJIXjJfe2RSfShVKSBcXG9wbHVzIEheMV97ZFJ9KFYpIl0sWzgsNCwiSF4yX3tkUn0oVSBcXGNhcCBWKSJdLFsxMCw0LCIwIl0sWzAsMV0sWzAsMCwiXFxidWxsZXQiXSxbMTIsNCwiXFxidWxsZXQiXSxbMSwwXSxbMCwyXSxbMiwzXSxbMyw0XSxbNCw1XSxbNSw2XSxbNiw3XSxbNyw4XSxbOCw5XSxbOSwxMF1d -->
+<iframe class="quiver-embed" src="https://q.uiver.app/#q=WzAsMTQsWzQsMCwiSF4wX3tkUn0oTSkiXSxbMiwwLCIwIl0sWzYsMCwiSF4wX3tkUn0oVSkgXFxvcGx1cyBIXjBfe2RSfShWKSJdLFs4LDAsIkheMF97ZFJ9KFUgXFxjYXAgVikiXSxbNCwyLCJIXjFfe2RSfShNKSJdLFs2LDIsIkheMV97ZFJ9KFUpIFxcb3BsdXMgSF4xX3tkUn0oVikiXSxbOCwyLCJIXjFfe2RSfShVIFxcY2FwIFYpIl0sWzQsNCwiSF4yX3tkUn0oTSkiXSxbNiw0LCJIXjJfe2RSfShVKSBcXG9wbHVzIEheMV97ZFJ9KFYpIl0sWzgsNCwiSF4yX3tkUn0oVSBcXGNhcCBWKSJdLFsxMCw0LCIwIl0sWzAsMV0sWzAsMCwiXFxidWxsZXQiXSxbMTIsNCwiXFxidWxsZXQiXSxbMSwwXSxbMCwyXSxbMiwzXSxbMyw0XSxbNCw1XSxbNSw2XSxbNiw3XSxbNyw4XSxbOCw5XSxbOSwxMF1d&embed" width=700" height="400" style="border-radius: 20px; border: none;"></iframe>
+
+
 </p>
 
 
