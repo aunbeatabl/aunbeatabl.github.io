@@ -16,7 +16,7 @@
 <body>
 <div class="w3-container w3-hover-white w3-border-bottom" style="background-color: #f7f3dc;" >
 <!-- Title and header-->
-<h1 style="margin: 10.0px 0.0px 16.1px 0.0px; font: 27.0px Verdana; color: #032658"><span class="s1"><b>Typing some math</b></span></h1>
+<h1 style="margin: 10.0px 0.0px 16.1px 0.0px; font: 27.0px Verdana; color: #032658"><span class="s1"><b>December 17th</b></span></h1>
 <div style="display: flex; ">
   <a href="../projects.html" class="button button1" style="margin: 0; color: black;">\(\leftarrow\) Back to projects</a>
 </div>
@@ -31,15 +31,19 @@
 <div class="w3-container" style="margin: 0px 35px 0px 15px; background-color: white">
 <br>
 <p class="p2"><span class="s1">I had my analysis final today; this was a good problem: <br>
-Use Zorn's lemma to show that every real vector space has a basis.<br>
-This isn't a particularly difficult problem in the countable case, but Zorn's lemma is required to upgrade the condition to a vector space of arbitrarily large dimention. <br>  
-Let \(V\) be the vector space, and let \(A\) be a spanning set.  We can put a partial ordering on \(P = \{S \in \mathcal{P}(A) : S \text{ spans } V\}\), where \(R < S\) if \(R \supset S\). 
-By Zorn's lemma, the \(P\) must have a maximal element since it is bounded by \(4\)
-
+<b>Use Zorn's lemma to show that every real vector space has a basis.</b>
+<p>
+This isn't a particularly difficult problem in the countable case, but Zorn's lemma is required to upgrade the condition to a vector space of arbitrarily large dimention.
+</p>
+<p> <i>Proof.</i>
+Let \(V\) denote the vector space, and let \(A\) be a spanning set.  We can put a partial ordering on \(P = \{S \in \mathcal{P}(A) : S \text{ spans } V\}\), where \(R < S\) if \(R \supset S\). 
+By Zorn's lemma, the \(P\) must have a maximal element since it is bounded by \(4\).
+</p>
+<p>
 The maximal element of \(P\) is the smallest subset of \(A\) which is spanning.  If it wasn't linearly independent then there would exist some \(w \in P\) for which there exists a collection 
-\(\{v_i\}_{i \in \mathbb{N}_{\leq k\}\) for some integer \(k\) which doesn't include \(w\) for which \[\sum_{i=1}^k a_iv_i = w.\]
-But then \(P - \{w\}\) is larger than the maximal element which is a contradiction.
-<br>
+\(\{v_i\}_{i \in \mathbb{N}_{\leq k}}\}\) for some integer \(k\) which doesn't include \(w\) for which \[\sum_{i=1}^k a_iv_i = w.\]
+But then \(P - \{w\}\) is larger than the maximal element which is a contradiction. 
+</p>
 I totally missed this problem on the test because I didn't think to order the sets by inclusion, and instead I tried to order the vectors in \(A\).
 </span></p>
 <br>
