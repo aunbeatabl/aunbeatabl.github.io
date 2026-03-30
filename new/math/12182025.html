@@ -11,7 +11,7 @@
 <body>
 <div class="w3-container w3-hover-white w3-border-bottom" style="background-color: #f7f3dc;" >
 <!-- Title and header-->
-<h1 style="margin: 10.0px 0.0px 16.1px 0.0px; font: 27.0px Verdana; color: #032658"><span class="s1"><b>December 18th</b></span></h1>
+<h1 style="margin: 10.0px 0.0px 16.1px 0.0px; font: 27.0px Verdana; color: #032658"><span class="s1"><b>Euler's Identity</b></span></h1>
 <div style="display: flex; ">
   <a href="../projects.html" class="button button1" style="margin: 0; color: black;">\(\leftarrow\) Back to projects</a>
 </div>
@@ -21,9 +21,20 @@
 <br>
 <div class="w3-container" style="margin: 0px 35px 0px 15px; background-color: white">
 <br>
-<p class="p2"><span class="s1">I had my analysis final today; this was a good problem: <br> <b>Use Zorn's lemma to show that every real vector space has a basis.</b>
+<p class="p2"><span class="s1">We prove Euler's identity \(e^{i \pi} =  -1\) using basic machinery. <p>
+<b>Outline:</b> We will show that \(e^x : \mathbb{C} \to \mathbb{C}\) is the unique function whose derivative is itself, and then show that when evaluated at \(i \pi\) it's value is \(-1\).
 <p>
-
+<b>What is \(e\)?</b>   Euler's constant is given by \[e := \lim_{n \to \infty} (1 + \frac{1}{n})^n.\]
+<p>
+<b>Claim: \(\frac{d}{dx} e^x = e^x\):</b> <p>
+The derivative of \(e^x\) (denote it by \(G\)) at \(x\) is given by: \[\begin{align}
+	G(x) &= \lim_{h \to 0} \frac{e^{x + h} - e^x}{h} \\
+    	&= \lim_{h \to 0} \frac{e^x(e^h - 1)}{h}\\
+        &= e^x \lim_{h \to 0} \frac{e^h - 1}{h},
+\end{align}\]
+so in order to show that \(G(x) = e^x\) we just have to show that \[\lim_{ h \to 0} \frac{e^h - 1}{h} = 1\]
+(keeping in mind that \(h\) is a complex number).
+<p>
 
 
 
