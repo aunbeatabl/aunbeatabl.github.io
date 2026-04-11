@@ -22,7 +22,7 @@
 <div class="w3-container" style="margin: 0px 35px 0px 15px; background-color: white">
 <br>
 <p class="p2"><span class="s1">We prove Euler's identity \(e^{i \pi} =  -1\) using basic machinery. <p>
-<b>Outline:</b> We will show that \(e^x : \mathbb{C} \to \mathbb{C}\) is the unique function whose derivative is itself, and then show that when evaluated at \(i \pi\) it's value is \(-1\).
+<b>Outline:</b> We will show that \(e^x : \mathbb{R} \to \mathbb{R}\) is the unique function whose derivative is itself, and then see that when we extend it to a function on \(\mathbb{C}\), when evaluated at \(i \pi\) it's value is \(-1\).
 <p>
 <b>What is \(e\)?</b>   Euler's constant is given by \[e := \lim_{n \to \infty} (1 + \frac{1}{n})^n.\]
 <p>
@@ -32,9 +32,27 @@ The derivative of \(e^x\) (denote it by \(G\)) at \(x\) is given by: \[\begin{al
     	&= \lim_{h \to 0} \frac{e^x(e^h - 1)}{h}\\
         &= e^x \lim_{h \to 0} \frac{e^h - 1}{h},
 \end{align}\]
-so in order to show that \(G(x) = e^x\) we just have to show that \[\lim_{ h \to 0} \frac{e^h - 1}{h} = 1\]
-(keeping in mind that \(h\) is a complex number).
+so in order to show that \(G(x) = e^x\) we just have to show that \[\lim_{ h \to 0} \frac{e^h - 1}{h} = 1.\]
+Equivalently, we want to show that as \(r \to \pm \infty\), \[r(\sqrt[r]{e} - 1) \to 1\]
+
+
+What does it mean to take the limit as \(r \to \infty\)?  \(\frac{e^h - 1}{h}\) is just a real-valued function here, and we want to that it converges as \(x\) grows arbitrarily large in either direction.  In other words, for any error \(\epsilon>0\), there exists some big \(B\) for which whenever you pick a number \(x\) for which \(|x| > B\), evaluating the function at \(x\) will be within \(\epsilon\) of the limit.
 <p>
+<button class="collapsible">Proof:</button>
+<div class="content">
+  <p>
+Our goal is to show that the function \(F(r) =r(\sqrt[r]{e} - 1) - 1\) approaches zero as \(|r|\) increases.  It is easy to see that \(F(r)\) is strictly increasing when \(r < 0\), and strictly decreasing when \(r > 0\).  Thus it suffices to show that we get arbitrarily close for integer values of \(r\), since for any real valued number we can choose a larger (or smaller if the number is negative) integer which is at least as close to zero. <p>
+  
+Let \(\epsilon > 0\). For all \(|r| > 0\), we know that \[r(\sqrt[r]{e} - 1) - 1 < \epsilon\] is equivalent to
+\[ e < (\frac{\epsilon}{r}  + 1 + \frac{1}{r})^r.\]
+Let \(M :=\).  For all \(|r| > M\), we have:<p>
+If \(r > 0\):
+
+<p>
+If \(r < 0\):
+</div>
+
+
 
 
 
