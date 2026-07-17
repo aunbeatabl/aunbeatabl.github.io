@@ -21,16 +21,23 @@
 <br>
 <div class="w3-container" style="margin: 0px 35px 0px 15px; background-color: white">
 <br>
-<p class="p2"><span class="s1">The third week of my REU is coming to a close.  Here's what I've worked on so far.</b>
+<p class="p2"><span class="s1">The third week of my REU is coming to a close.  Here's what I've worked on so far.
 <p>
-A sequence \(z_n \in \mathbb{D}\) is called "interpolating" if for every other sequence \(x_n \in \ell^{\infty}(\mathbb{D})\), there is some bounded analytic function \(f \in H^{\infty}(\mathbb{D}\)
+A sequence \(z_n \in \mathbb{D}\) is called <b>interpolating</b> if for every other sequence \(a_n \in \ell^{\infty}(\mathbb{D})\), there is some bounded analytic function \(f \in H^{\infty}(\mathbb{D}\)
 for which \(f(z_n) = a_n\) for all \(n\).  This seems like a pretty strict condition, but Carleson (see, e.g., Garnett, "Bounded Analytic Functions") showed that the following are equivalent: <ul>
-<li>A sequence is interpolating</li>
+<li>The sequence \(z_n\) is interpolating</li>
 <li>\[\inf_n \prod_{m\neq n}\rho(z_n, z_m) > 0\]</li>
-<li>\(\inf_{n, m} \rho(a_n, a_m) > 0\), and furthermore, </li>
+<li>\(\inf_{n, m} \rho(z_n, z_m) > 0\), and furthermore,\[\sum_{z_n \in S(I)} (1-z_n)\delta_{z_n} < C|I|,\] 
+for all arcs \(I \subseteq \mathbb{T}\), where \(S(I) := \{re^{2 \pi i \theta} : e^{2 \pi i \theta} \in I, r \in (|I|, 1)\}\) is called a <b>Carleson square</b> and \(\delta_z\) is the unit point mass.
+</li>
 </ul>
-where \(\rho\) is the pseudohyperbolic metric \(\rho(z, w) \coloneq \left|\frac{z-w}{z\overline{w} - 1}\right|\).  If you are familiar with the Blaschke map, you'll see this is the same thing.
+where \(\rho\) is the pseudohyperbolic metric \(\rho(z, w) := \left|\frac{z-w}{z\overline{w} - 1}\right|\).  If you are familiar with the Blaschke map, you'll see this is the same thing.
 </p>
+
+My group is looking at the sequence \(z_n = (1-\frac{1}{n^p})e^{2 \pi i n \alpha}\) and examining the relationship between \(\alpha\) and \(p\) when \(z_n\) is interpolating. <br>
+
+So far we've found that \((z_n)\) is interpolating precisely when \(\alpha\) is Diophantine with exponent \(p\), that is, for all \(p, q \in \mathbb{Z}\) \[|p\alpha - q| \geq p^n.\]
+
 
 </span>
 </p>
