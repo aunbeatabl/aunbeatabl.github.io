@@ -11,7 +11,7 @@
 <body>
 <div class="w3-container w3-hover-white w3-border-bottom" style="background-color: #f7f3dc;" >
 <!-- Title and header-->
-<h1 style="margin: 10.0px 0.0px 16.1px 0.0px; font: 27.0px Verdana; color: #032658"><span class="s1"><b>December 17th (Part 2)</b></span></h1>
+<h1 style="margin: 10.0px 0.0px 16.1px 0.0px; font: 27.0px Verdana; color: #032658"><span class="s1"><b>Carleson's Interpolation Theorem and A Special Sequence</b></span></h1>
 <div style="display: flex; ">
   <a href="../projects.html" class="button button1" style="margin: 0; color: black;">\(\leftarrow\) Back to projects</a>
 </div>
@@ -23,7 +23,13 @@
 <br>
 <p class="p2"><span class="s1">The third week of my REU is coming to a close.  Here's what I've worked on so far.</b>
 <p>
-A sequence \(z_n \in \mathbb{D}\) is called "interpolating" if for every 
+A sequence \(z_n \in \mathbb{D}\) is called "interpolating" if for every other sequence \(x_n \in \ell^{\infty}(\mathbb{D})\), there is some bounded analytic function \(f \in H^{\infty}(\mathbb{D}\)
+for which \(f(z_n) = a_n\) for all \(n\).  This seems like a pretty strict condition, but Carleson (see, e.g., Garnett, "Bounded Analytic Functions") showed that the following are equivalent: <ul>
+<li>A sequence is interpolating</li>
+<li>\[\inf_n \prod_{m\neq n}\rho(z_n, z_m) > 0\]</li>
+<li>\(\inf_{n, m} \rho(a_n, a_m) > 0\), and furthermore, </li>
+</ul>
+where \(\rho\) is the pseudohyperbolic metric \(\rho(z, w) \coloneq \left|\frac{z-w}{z\overline{w} - 1}\right|\).  If you are familiar with the Blaschke map, you'll see this is the same thing.
 </p>
 
 </span>
