@@ -1,77 +1,124 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
 <html>
-<!-- Practice Website: https://www.w3schools.com/w3css/tryit.asp?filename=tryw3css_containers_div_header-->
-<!-- Note to self-->
 <head>
   <!-- Color, Fonts/links, Button-->
-  <link rel="stylesheet" href="style.css">
-  <link rel="icon" type="image/x-icon" href="../favicon.png">
+  <link rel="stylesheet" href="../style.css">
+  <link rel="icon" type="image/x-icon" href="../../favicon.png">
   <script id="MathJax-script" async
           src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js">
   </script>
 </head>
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css">
-
 <body>
 <div class="w3-container w3-hover-white w3-border-bottom" style="background-color: #f7f3dc;" >
 <!-- Title and header-->
-<h1 style="margin: 10.0px 0.0px 16.1px 0.0px; font: 27.0px Verdana; color: #032658"><span class="s1"><b>Projects</b></span></h1>
-<div class="center control-container" style="display: flex; ">
-  <a href="../index.html" class="button button1" style="margin: 0; color: black;">Home</a>
-  <a href="notes.html" class="button button1" style="margin: 0; color: black;">Coursework</a>
-  <a href="projects.html" class="button button1" style="margin: 0; color: black;">Projects</a>
-  <a href="experience.html" class="button button1" style="margin: 0; color: black;">Experience</a>
+<h1 style="margin: 10.0px 0.0px 16.1px 0.0px; font: 27.0px Verdana; color: #032658"><span class="s1"><b>Carleson's Interpolation Theorem and A Special Sequence</b></span></h1>
+<div style="display: flex; ">
+  <a href="../projects.html" class="button button1" style="margin: 0; color: black;">\(\leftarrow\) Back to projects</a>
 </div>
 </div>
 
 
 <br>
-<div class="w3-container" style="margin: 0px 325px 0px 15px";>
-<p class="p2"><span class="s1">Here are some personal projects and similar endeavors.</span></p> 
-</div>
+<div class="w3-container" style="margin: 0px 35px 0px 15px; background-color: white">
 <br>
-<div class="w3-container" style="margin: 0px 325px 0px 15px; background-color: white";>
-<p  class="p4"><span class="s1">Directed Reading Programs</span></p>
-<br>
-<p  class="p2"><span class="s1">During Spring 2025 I participated in the <a href="https://wp.math.berkeley.edu/drp/">Berkeley Math Directed Reading Program</a>, reading about the Theory of Combinatorial Species under the mentorship of graduate student Saud Molaib.
-  This program culminated in a final project for which I wrote an expository paper and made a presentation about the Theory of Combinatorial Species and a proof of the Lagrange Inversion Formula. </span></p>
-<p class="p2"><span class="s1">Here is my <a href="../UC_Berkeley_Beamer_Theme__1_ (4).pdf">slideshow</a> and <a href="../DRP_Combinatorial_Species (1).pdf">paper</a></span></p>
-<p  class="p2"><span class="s1">I did this program again during the fall where I read about differential topology.</span></p>
-<br>
-<p  class="p2"><span class="s1">I also participated in the <a href="https://mathalliancemrp.org/">Math Alliance Mentored Reading Program</a>, where I read some Harmonic Analysis from the textbook by Pereyra and Ward, under the mentorship of a postdoc at WUSTL. </span></p>
-</div>
-<br>
+<p class="p2"><span class="s1">The third week of my REU is coming to a close.  Here's what I've worked on so far.
+<p>
+<p  class="p4"><span class="s1">Carleson's Interpolation Theorem</span></p>
+A sequence \(z_n \in \mathbb{D}\) is called <b>interpolating</b> if for every other sequence \(a_n \in \ell^{\infty}(\mathbb{D})\) (that means there exists some \(M > 0\) which is greater than the magnitudes of every element of the sequence), there is some bounded analytic function \(f \in H^{\infty}(\mathbb{D}\)
+for which \(f(z_n) = a_n\) for all \(n\).  This seems like a pretty strict condition, but Carleson (see, e.g., Garnett, "Bounded Analytic Functions") showed that the following are equivalent: <ul>
+<li>The sequence \(z_n\) is interpolating</li>
+<li>\[\inf_n \prod_{m\neq n}\rho(z_n, z_m) > 0\]</li>
+<li>\(\inf_{n, m} \rho(z_n, z_m) > 0\), and furthermore,\[\sum_{z_n \in S(I)} (1-z_n)\delta_{z_n} < C|I|,\] 
+for all arcs \(I \subseteq \mathbb{T}\), where \(S(I) := \{re^{2 \pi i \theta} : e^{2 \pi i \theta} \in I, r \in (|I|, 1)\}\) is called a <b>Carleson square</b> and \(\delta_z\) is the unit point mass.
+</li>
+</ul>
+where \(\rho\) is the pseudohyperbolic metric \(\rho(z, w) := \left|\frac{z-w}{z\overline{w} - 1}\right|\).  If you are familiar with the Blaschke map, you'll see this is the same thing.
+</p>
 
 
-<br>
-<div class="w3-container" style="margin: 0px 325px 0px 15px; background-color: white";>
-<p  class="p4"><span class="s1">Math problems and ideas</span></p>
-<br>
-<p  class="p2"><span class="s1"> 12/17/2025: <a href="math/12172025.html" class="buton button1">Hamel Bases \(\rightarrow\)</a>. </span></p>
-<p  class="p2"><span class="s1"> 12/17/2025: <a href="math/1217.22025.html" class="buton button1">Computing de Rham Cohomology \(\rightarrow\)</a>. </span></p>
-<p  class="p2"><span class="s1"> Euler's Identity: <a href="math/1218.2025.html" class="buton button1">Title \(\rightarrow\)</a>. </span></p>
-<p  class="p2"><span class="s1"> REU Week 3: <a href="math/REUprogress.html" class="buton button1">Carleson's Interpolation Theorem and A Special Sequence \(\rightarrow\)</a>. </span></p>
-</div>
-<br>
+<p  class="p4"><span class="s1">Exposition</span></p>
+My group is looking at the sequence \(z_n = (1-\frac{1}{n^p})e^{2 \pi i n \alpha}\) and examining the relationship between \(\alpha\) and \(p\) when \(z_n\) is interpolating.<br> <br>
 
-  
-<br>
-<div class="w3-container" style="margin: 0px 325px 0px 15px; background-color: white";>
-<p  class="p4"><span class="s1">Expository Notes</span></p>
-<br>
-<p  class="p2"><span class="s1">Notes on <a href="../Banach_Algebras.pdf">Banach Algebras</a>. </span></p>
-<p  class="p2"><span class="s1">The <a href="../Steinhaus.pdf">Steinhaus Theorem and some Corollaries </a>. </span></p>
-</div>
-<br>
+<b>Some things to think about</b>: An interpolating sequence must not have limit points in the domain, since by the identity theorem, any analytic function can be uniquely determined by it's values on a set with limit points.  <details> <summary> <b>Proof</b></summary> <p> Suppose two functions from an open set \(\Omega\) to \(\mathbb{C}\) given by \(f = \sum_{n \in \mathbb{N}} a_nx^n\) and \(g = \sum_{n \in \mathbb{N}} b_nx^n\) agree for all values of a sequence \((z_n)\) which converges to \(z_0\).  Then consider \(h(z) := f-g(z + z_0))\), so that \(h: \{x - z_0: x \in \Omega\} \to \mathbb{C}\) vanishes at all values of a new sequence \((y_n\) which converges to \(0\). <br> <br>
+Obviously \(h = \sum_{n \in \mathbb{N}} (a_n - b_n) x^n\) is now analytic, and we will show it must be zero.  The crux of this proof relies on the idea that there must be some smallest nonzero term.  Suppose that term is \(a_m - b_m\), that is, for all \(n < m\), \(a_n - b_n = 0\).  Then we can write \[h(z) = (a_m-b_m)x^m(1 + j(z)),\] where \(j(z)\) is an analytic function.  By continuity of \(j(z)\) and convergence of \((y_n)\) to zero, we can find some small \(y_k\) for which \(1 + j(y_k) \neq 0\).  But neither is \((a_m - b_m)(y_k)^m\), so we get a contradiction because \(h(y_k)\) was supposed to be zero.<br><br>
+And analytic functions have to be continuous, because they are the uniform limit of continuous functions (polynomials) everywhere inside of \(\Omega\).
+</p> </details>
 
-  
+<br><br>
+
+So far my group has found that \((z_n)\) is interpolating precisely when \(\alpha\) is Diophantine with exponent \(p\), that is, for all \(p, q \in \mathbb{Z}\) \[|p\alpha - q| \geq p^n.\]
+
+<p> <i>Proof.</i>
+First, we show that if \((z_n)\) is separated if and only if \(\alpha\) satisfies the Diophantine Condition.  Then we show that when the Diophantine Condition is satisfied, the Carleson square property is also satisfied.
+</p>
+
+<ol>
+<li> If \((z_n)\) is separated then it satisfies the Diophantine Condition.  <details>
+  <summary><b>Proof</b></summary>
+  <p>Suppose \(a_n\) is separated by \(c\).  Then we will show that the condition (\(\alpha\) is Diophantine of exponent \(p\)) holds. 
 <br>
-<div class="w3-container" style="margin: 0px 325px 0px 15px; background-color: white";>
-<p  class="p4"><span class="s1">Other</span></p>
+Let \(r_n := 1 - \frac{1}{n^p}\).  Computation tells us \begin{align*}
+    c < \rho\left(\left(1-\frac{1}{n^p}\right)e^{2 \pi i k\alpha}, 1 - \frac{1}{(n+k)^p}\right) &\leq \frac{|r_n - r_{n+k}| + r_{n+k}|1 - e^{2 \pi i \alpha k}|}{|1 - r_n r_{n+k}e^{2 \pi i k\alpha}|}\\
+    &= \frac{\left|\frac{1}{(n+k)^p} - \frac{1}{n^p}\right| + r_{n+k}2|\sin(\pi \Vert \alpha k \Vert)|}{|1 - r_n r_{n+k}|}\\
+    &\leq \frac{\left|\frac{1}{(n+k)^p} - \frac{1}{n^p}\right| + C\Vert \alpha k\Vert}{|\frac{1}{n^p}|}\\
+    &= \left|1 - \frac{(n+k)^p}{n^p} + n^p C \Vert \alpha k \Vert \right|.
+\end{align*}
+
+Let \(n = mk\), and choose \(m\) such that \(1 - \left(\frac{m}{m+1}\right)^p < \frac{c}{2}\).  Using the computations above we see that
+\begin{align*}
+    \rho\left(\left(1-\frac{1}{n^p}\right)e^{2 \pi i k\alpha}, 1 - \frac{1}{(n+k)^p}\right)&<\left|1 - \frac{(n+k)^p}{n^p} + n^p C \Vert \alpha k \Vert \right| \\
+    &= \left| 1 - \frac{(m+1)^p}{m^p} + m^pk^p C \Vert \alpha k \Vert \right|\\
+    &< \frac{c}{2} + m^pk^p C\Vert \alpha k \Vert.
+\end{align*}
+Putting it all together gives \[\frac{1}{Cm^p}\left(c - \frac{c}{2}\right) < k^p \Vert \alpha k \Vert\] and we see that \[\inf_{k \in \mathbb{Z}^+}  k^p \Vert \alpha k \Vert> 0,\] which is precisely the Diophantine condition. </p>
+</details></li>
+
+
+
+<li> If the Diophantine condition holds, then \(a_n\) is separated. <details><summary><b>Proof</b></summary>
+  <p>
+\begin{align*}
+    \rho\left(\left(1-\frac{1}{n^p}\right)e^{2 \pi i k\alpha}, 1 - \frac{1}{(n+k)^p}\right) 
+    &= \frac{|(r_n - r_{n+k}) + r_{n+k}(1 - e^{2 \pi i \alpha k})|}{|1 - r_n r_{n+k}e^{2 \pi i k\alpha}|}\\
+    &\geq \frac{|r_{n+k}(1 - e^{2 \pi i \alpha k})|}{|1 - r_n r_{n+k}e^{2 \pi i k\alpha}|}
+\end{align*}
+
+And as we can see, the denominator can be bounded above well
+\begin{align*}
+    \left| 1 - r_nr_{n+k}e^{2 \pi i k \alpha} \right|  &= \left|1 - e^{2 \pi i k\alpha} + \left(\frac{1}{(n+k)^p} + \frac{1}{n^p} - \frac{1}{(n+k)^pn^p} \right)e^{2 \pi i k \alpha} \right|\\
+    &\leq |1 - e^{2 \pi i k\alpha}| +  \left|\frac{1}{(n+k)^p} + \frac{1}{n^p}- \frac{1}{(n+k)^pn^p} \right|\\
+    &\leq |1 - e^{2 \pi i k\alpha}| +  \left|\frac{1}{(n+k)^p}r_{n} \right|\\
+    &< |1 - e^{2 \pi i k\alpha}| +  \left| \frac{1}{k^p}r_{n+k} \right|
+\end{align*}
+since \(r_n < r_{n+k}\) while \(\frac{1}{a+b} < \frac{1}{a}\).  Finally, putting it all together and assuming the Diophantine condition, we see that
+\begin{align*}
+    \rho\left(\left(1-\frac{1}{n^p}\right)e^{2 \pi i k\alpha}, 1 - \frac{1}{(n+k)^p}\right)  &> \frac{r_{n+k}\left|(1 - e^{2 \pi i k \alpha})\right|}{|1 - e^{2 \pi i k\alpha}| +  \left| \frac{1}{k^p}r_{n+k} \right|} \\
+    &= \frac{r_{n+k}}{1 + \left|\frac{\frac{1}{k^p} r_{n+k}}{|1 - e^{2 \pi i k\alpha}|} \right|}\\
+    &> \frac{r_{n+k}}{1 + \left|\frac{\frac{1}{k^p} r_{n+k}}{\frac{C}{k^p}r_{n+k}} \right|}\\ 
+    &= \frac{Cr_{n+k}}{C+1} > \frac{C}{2C+ 2} > 0.
+\end{align*}
+since \(r_{n+k} > \frac{1}{2}\).  (This makes sense because \(C\) is usually very small).</p> </details> </li>
+
+<li>Finally, we demonstrate the "Carleson Squares Condition", that is, for all arcs \(I \subseteq \mathbb{T}\) with length \(|I|\), we aim to show that \(\sum_{a_n \in S(I)}(1 - |a_n|)\), where \(S(I) := \{r e^{2 \pi i \theta} : \theta \in I, 1-|I| \leq r < 1\}\).  <details> <summary> <b>Proof</b> </summary> <p>
+By our assumption, it takes at least \(\sqrt[p]{\frac{C}{|I|}}\) iterations of the sequence to arrive within \(|I|\) of where it started.  Then \[\sum_{a_n \in S(I)} (1 - |a_n|) = \sum_{a_n \in S(I)} \frac{1}{n^p} \leq K\sum_n\frac{1}{\left(n\sqrt[p]{\frac{C}{|I|}}\right)^p} = \frac{|I|}{C'} \sum \frac{1}{n^p} \leq C'|I|.\]
+
+where the \(K\) which is absorbed by the \(C'\) comes from the Three-Gap problem.
+
+We want to show that if it takes at least \(m\) steps to arrive within \(I\) of the starting position the first time, then it will take at least \(C * m * n\) steps to arrive within \(I\) of the starting position the \(n\)th time.   
+<br> <br>
+<i>Lemma (Three-Gaps).</i> Consider the sequence \((a_n)\) with \(a_n = e^{2 \pi i n \alpha}\).  After finitely many steps, there are at most three different distances between adjacent \(a_n\). <br><br>
+<i>Corollary.</i> If it takes at least \(m\) steps to arrive within \(I\) of the starting position the first time, then it will take at least \(C * m * n\) steps to arrive within \(I\) of the starting position the \(n\)th time.  <br><br>
+<i>Proof of Corollary.</i>
+We know it takes a finite amount of time for the largest possible adjacent distance to be less than \(|I|\) by 3 gaps theorem. Since this angular distance (call it \(\theta\)) is nonzero by assumption, it will never take more than \(\lceil \frac{1}{\theta} \rceil * (\text{number of moves it takes change your distance by exactly }\theta)\) turns to end up at most one turn away from ending up back in I.  This is our constant \(C\).
+<br><br>
+    After \(C*m\) steps, we will have entered the interval at least \(m\) times (probably more).  Thus it is proven, and setting \(K\) to be \(C\) in the original proof finishes the proof that the Diophantine Condition is necessary and sufficient for characterizing an interpolating sequence.
+</p></details> </li>
+</ol>
+
+
+</span>
+</p>
 <br>
-<p  class="p2"><span class="s1"><a href="../connect5/connect5.html">Connect 5</a>. </span> (with <a href="https://github.com/YBathcat">Ian K</a>.)</p>
 </div>
-<br>
-  
 </body>
 </html>
