@@ -42,6 +42,53 @@ So far we've found that \((z_n)\) is interpolating precisely when \(\alpha\) is 
 First, we show that if \((z_n)\) is separated if and only if \(\alpha\) satisfies the Diophantine Condition.  Then we show that when the Diophantine Condition is satisfied, the Carleson square property is also satisfied.
 </p>
 
+<ol>
+<li> If \((z_n)\) is separated then it satisfies the Diophantine Condition.  <details>
+  <summary><b>Proof</b></summary>
+  <p>Suppose \(a_n\) is separated by \(c\).  Then we will show that the condition (\(\alpha\) is Diophantine of exponent \(p\)) holds. 
+<br>
+Let \(r_n := 1 - \frac{1}{n^p}\).  Computation tells us \begin{align*}
+    c < \rho\left(\left(1-\frac{1}{n^p}\right)e^{2 \pi i k\alpha}, 1 - \frac{1}{(n+k)^p}\right) &\leq \frac{|r_n - r_{n+k}| + r_{n+k}|1 - e^{2 \pi i \alpha k}|}{|1 - r_n r_{n+k}e^{2 \pi i k\alpha}|}\\
+    &= \frac{\left|\frac{1}{(n+k)^p} - \frac{1}{n^p}\right| + r_{n+k}2|\sin(\pi \Vert \alpha k \Vert)|}{|1 - r_n r_{n+k}|}\\
+    &\leq \frac{\left|\frac{1}{(n+k)^p} - \frac{1}{n^p}\right| + C\Vert \alpha k\Vert}{|\frac{1}{n^p}|}\\
+    &= \left|1 - \frac{(n+k)^p}{n^p} + n^p C \Vert \alpha k \Vert \right|.
+\end{align*}
+
+Let \(n = mk\), and choose \(m\) such that \(1 - \left(\frac{m}{m+1}\right)^p < \frac{c}{2}\).  Using the computations above we see that
+\begin{align*}
+    \rho\left(\left(1-\frac{1}{n^p}\right)e^{2 \pi i k\alpha}, 1 - \frac{1}{(n+k)^p}\right)&<\left|1 - \frac{(n+k)^p}{n^p} + n^p C \Vert \alpha k \Vert \right| \\
+    &= \left| 1 - \frac{(m+1)^p}{m^p} + m^pk^p C \Vert \alpha k \Vert \right|\\
+    &< \frac{c}{2} + m^pk^p C\Vert \alpha k \Vert.
+\end{align*}
+Putting it all together gives \[\frac{1}{Cm^p}\left(c - \frac{c}{2}\right) < k^p \Vert \alpha k \Vert\] and we see that \[\inf_{k \in \mathbb{Z}^+}  k^p \Vert \alpha k \Vert> 0,\] which is precisely the Diophantine condition.</p>
+</details></li>
+<li> If the Diophantine condition holds, then \(a_n\) is separated. <details><summary><b>Proof</b></summary>
+  <p>
+\begin{align*}
+    \rho\left(\left(1-\frac{1}{n^p}\right)e^{2 \pi i k\alpha}, 1 - \frac{1}{(n+k)^p}\right) 
+    &= \frac{|(r_n - r_{n+k}) + r_{n+k}(1 - e^{2 \pi i \alpha k})|}{|1 - r_n r_{n+k}e^{2 \pi i k\alpha}|}\\
+    &\geq \frac{|r_{n+k}(1 - e^{2 \pi i \alpha k})|}{|1 - r_n r_{n+k}e^{2 \pi i k\alpha}|}
+\end{align*}
+
+And as we can see, the denominator can be bounded above well
+\begin{align*}
+    \left| 1 - r_nr_{n+k}e^{2 \pi i k \alpha} \right|  &= \left|1 - e^{2 \pi i k\alpha} + \left(\frac{1}{(n+k)^p} + \frac{1}{n^p} - \frac{1}{(n+k)^pn^p} \right)e^{2 \pi i k \alpha} \right|\\
+    &\leq |1 - e^{2 \pi i k\alpha}| +  \left|\frac{1}{(n+k)^p} + \frac{1}{n^p}- \frac{1}{(n+k)^pn^p} \right|\\
+    &\leq |1 - e^{2 \pi i k\alpha}| +  \left|\frac{1}{(n+k)^p}r_{n} \right|\\
+    &< |1 - e^{2 \pi i k\alpha}| +  \left| \frac{1}{k^p}r_{n+k} \right|
+\end{align*}
+since \(r_n < r_{n+k}\) while \(\frac{1}{a+b} < \frac{1}{a}\).  Finally, putting it all together and assuming the Diophantine condition, we see that
+\begin{align*}
+    \rho\left(\left(1-\frac{1}{n^p}\right)e^{2 \pi i k\alpha}, 1 - \frac{1}{(n+k)^p}\right)  &> \frac{r_{n+k}\left|(1 - e^{2 \pi i k \alpha})\right|}{|1 - e^{2 \pi i k\alpha}| +  \left| \frac{1}{k^p}r_{n+k} \right|} \\
+    &= \frac{r_{n+k}}{1 + \left|\frac{\frac{1}{k^p} r_{n+k}}{|1 - e^{2 \pi i k\alpha}|} \right|}\\
+    &> \frac{r_{n+k}}{1 + \left|\frac{\frac{1}{k^p} r_{n+k}}{\frac{C}{k^p}r_{n+k}} \right|}\\ 
+    &= \frac{Cr_{n+k}}{C+1} > \frac{C}{2C+ 2} > 0.
+\end{align*}
+since \(r_{n+k} > \frac{1}{2}\).  (This makes sense because \(C\) is usually very small).</p> </details> </li>
+
+<li> </li>
+</ol>
+
 
 </span>
 </p>
