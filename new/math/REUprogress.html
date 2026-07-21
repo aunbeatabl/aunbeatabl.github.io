@@ -24,7 +24,7 @@
 <p class="p2"><span class="s1">The third week of my REU is coming to a close.  Here's what I've worked on so far.
 <p>
 <p  class="p4"><span class="s1">Carleson's Interpolation Theorem</span></p>
-A sequence \(z_n \in \mathbb{D}\) is called <b>interpolating</b> if for every other sequence \(a_n \in \ell^{\infty}(\mathbb{D})\) (that means there exists some \(M > 0\) which is greater than the magnitudes of every element of the sequence), there is some bounded analytic function \(f \in H^{\infty}(\mathbb{D}\)
+A sequence \(z_n \in \mathbb{D}\) is called <b>interpolating</b> if for every other sequence \(a_n \in \ell^{\infty}(\mathbb{D})\) (that means there exists some \(M > 0\) which is greater than the magnitudes of every element of the sequence), there is some bounded analytic function \(f \in H^{\infty}(\mathbb{D})\)
 for which \(f(z_n) = a_n\) for all \(n\).  This seems like a pretty strict condition, but Carleson (see, e.g., Garnett, "Bounded Analytic Functions") showed that the following are equivalent: <ul>
 <li>The sequence \(z_n\) is interpolating</li>
 <li>\[\inf_n \prod_{m\neq n}\rho(z_n, z_m) > 0\]</li>
@@ -39,22 +39,25 @@ where \(\rho\) is the pseudohyperbolic metric \(\rho(z, w) := \left|\frac{z-w}{z
 <p  class="p4"><span class="s1">Exposition</span></p>
 My group is looking at the sequence \(z_n = (1-\frac{1}{n^p})e^{2 \pi i n \alpha}\) and examining the relationship between \(\alpha\) and \(p\) when \(z_n\) is interpolating.<br> <br>
 
-<b>Some things to think about</b>: An interpolating sequence must not have limit points in the domain, since by the identity theorem, any analytic function can be uniquely determined by it's values on a set with limit points.  <details> <summary> <b>Proof</b></summary> <p> Suppose two functions from an open set \(\Omega\) to \(\mathbb{C}\) given by \(f = \sum_{n \in \mathbb{N}} a_nx^n\) and \(g = \sum_{n \in \mathbb{N}} b_nx^n\) agree for all values of a sequence \((z_n)\) which converges to \(z_0\).  Then consider \(h(z) := f-g(z + z_0))\), so that \(h: \{x - z_0: x \in \Omega\} \to \mathbb{C}\) vanishes at all values of a new sequence \((y_n\) which converges to \(0\). <br> <br>
+<b>Some things to think about</b>: An interpolating sequence must not have limit points in the domain, since by the identity theorem, any analytic function can be uniquely determined by it's values on a set with limit points.  <details> <summary> <b>Proof of the Identity Theorem.</b></summary> <p> Suppose two functions from an open set \(\Omega\) to \(\mathbb{C}\) given by \(f = \sum_{n \in \mathbb{N}} a_nx^n\) and \(g = \sum_{n \in \mathbb{N}} b_nx^n\) agree for all values of a sequence \((z_n)\) which converges to \(z_0\).  Then consider \(h(z) := f-g(z + z_0))\), so that \(h: \{x - z_0: x \in \Omega\} \to \mathbb{C}\) vanishes at all values of a new sequence \((y_n\) which converges to \(0\). <br> <br>
 Obviously \(h = \sum_{n \in \mathbb{N}} (a_n - b_n) x^n\) is now analytic, and we will show it must be zero.  The crux of this proof relies on the idea that there must be some smallest nonzero term.  Suppose that term is \(a_m - b_m\), that is, for all \(n < m\), \(a_n - b_n = 0\).  Then we can write \[h(z) = (a_m-b_m)x^m(1 + j(z)),\] where \(j(z)\) is an analytic function.  By continuity of \(j(z)\) and convergence of \((y_n)\) to zero, we can find some small \(y_k\) for which \(1 + j(y_k) \neq 0\).  But neither is \((a_m - b_m)(y_k)^m\), so we get a contradiction because \(h(y_k)\) was supposed to be zero.<br><br>
 And analytic functions have to be continuous, because they are the uniform limit of continuous functions (polynomials) everywhere inside of \(\Omega\).
 </p> </details>
-
-<br><br>
-
+Necessary for the proof of Carleson's Interpolation Theorem is that any interpolating sequence will define a linear map \(A:H^{\infty}(\mathbb{D}) \to \ell^\infty(\mathbb{D}).\)  The functional-analytic properties of this map, for example, that it is open, come into play in the proof.
+<br>
+<p  class="p4"><span class="s1">What we worked on</span></p>
 So far my group has found that \((z_n)\) is interpolating precisely when \(\alpha\) is Diophantine with exponent \(p\), that is, for all \(p, q \in \mathbb{Z}\) \[|p\alpha - q| \geq p^n.\]
 
+For ease of notation, let \(\Vert \alpha k\Vert\) denote \((|\alpha k - .5| \mod 1) + .5\).
+
 <p> <i>Proof.</i>
-First, we show that if \((z_n)\) is separated if and only if \(\alpha\) satisfies the Diophantine Condition.  Then we show that when the Diophantine Condition is satisfied, the Carleson square property is also satisfied.
+First, we show that if \((z_n)\) is separated if and only if \(\alpha\) satisfies the Diophantine Condition.  Then we show that when the Diophantine Condition is satisfied, the Carleson square property is also satisfied. <br> <br>
+We will use the following substitution multiple times: notice that you can translate the Diophantine condition into a condition about \(|1 - e^{2 \pi i \alpha k}|\).  This comes from the half-angle formula, since \[|1 - e^{2 \pi i \alpha k}| = 2 \left| \sin(\pi \Vert \alpha k \Vert )\right|,\] and by the small angle approximation for \(\sin\) and the Diophantine condition we have \[2 \left| \sin(\pi \Vert ak \Vert )\right| \geq 2 \pi \Vert \alpha k \Vert \geq  \frac{C}{k^p}.\]
 </p>
 
 <ol>
 <li> If \((z_n)\) is separated then it satisfies the Diophantine Condition.  <details>
-  <summary><b>Proof</b></summary>
+  <summary><b>Proof.</b></summary>
   <p>Suppose \(a_n\) is separated by \(c\).  Then we will show that the condition (\(\alpha\) is Diophantine of exponent \(p\)) holds. 
 <br>
 Let \(r_n := 1 - \frac{1}{n^p}\).  Computation tells us \begin{align*}
@@ -75,7 +78,7 @@ Putting it all together gives \[\frac{1}{Cm^p}\left(c - \frac{c}{2}\right) < k^p
 
 
 
-<li> If the Diophantine condition holds, then \(a_n\) is separated. <details><summary><b>Proof</b></summary>
+<li> If the Diophantine condition holds, then \(a_n\) is separated. <details><summary><b>Proof.</b></summary>
   <p>
 \begin{align*}
     \rho\left(\left(1-\frac{1}{n^p}\right)e^{2 \pi i k\alpha}, 1 - \frac{1}{(n+k)^p}\right) 
@@ -99,7 +102,7 @@ since \(r_n < r_{n+k}\) while \(\frac{1}{a+b} < \frac{1}{a}\).  Finally, putting
 \end{align*}
 since \(r_{n+k} > \frac{1}{2}\).  (This makes sense because \(C\) is usually very small).</p> </details> </li>
 
-<li>Finally, we demonstrate the "Carleson Squares Condition", that is, for all arcs \(I \subseteq \mathbb{T}\) with length \(|I|\), we aim to show that \(\sum_{a_n \in S(I)}(1 - |a_n|)\), where \(S(I) := \{r e^{2 \pi i \theta} : \theta \in I, 1-|I| \leq r < 1\}\).  <details> <summary> <b>Proof</b> </summary> <p>
+<li>Finally, we demonstrate the "Carleson Squares Condition", that is, for all arcs \(I \subseteq \mathbb{T}\) with length \(|I|\), we aim to show that \(\sum_{a_n \in S(I)}(1 - |a_n|)\), where \(S(I) := \{r e^{2 \pi i \theta} : \theta \in I, 1-|I| \leq r < 1\}\).  <details> <summary> <b>Proof.</b> </summary> <p>
 By our assumption, it takes at least \(\sqrt[p]{\frac{C}{|I|}}\) iterations of the sequence to arrive within \(|I|\) of where it started.  Then \[\sum_{a_n \in S(I)} (1 - |a_n|) = \sum_{a_n \in S(I)} \frac{1}{n^p} \leq K\sum_n\frac{1}{\left(n\sqrt[p]{\frac{C}{|I|}}\right)^p} = \frac{|I|}{C'} \sum \frac{1}{n^p} \leq C'|I|.\]
 
 where the \(K\) which is absorbed by the \(C'\) comes from the Three-Gap problem.
@@ -114,7 +117,7 @@ We know it takes a finite amount of time for the largest possible adjacent dista
     After \(C*m\) steps, we will have entered the interval at least \(m\) times (probably more).  Thus it is proven, and setting \(K\) to be \(C\) in the original proof finishes the proof that the Diophantine Condition is necessary and sufficient for characterizing an interpolating sequence.
 </p></details> </li>
 </ol>
-
+This proof uses a few important ideas.  First, that you can translate the Diophantine condition into a condition about \(|1 - e^{2 \pi i \alpha k}|\).  Second, that the Diophantine condition on the distance from \(\alpha\) to an integer is a condition on the number of iterations of the sequence it takes to have an angle close to what it was originally.  Finally, the three gaps theorem and it's consequences is also used.
 
 </span>
 </p>
