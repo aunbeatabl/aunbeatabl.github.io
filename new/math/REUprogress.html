@@ -37,15 +37,14 @@ where \(\rho\) is the pseudohyperbolic metric \(\rho(z, w) := \left|\frac{z-w}{z
 
 
 <p  class="p4"><span class="s1">Exposition</span></p>
-My group is looking at the sequence \(z_n = (1-\frac{1}{n^p})e^{2 \pi i n \alpha}\) and examining the relationship between \(\alpha\) and \(p\) when \(z_n\) is interpolating.<br> <br>
-
 <b>Some things to think about</b>: An interpolating sequence must not have limit points in the domain, since by the identity theorem, any analytic function can be uniquely determined by it's values on a set with limit points.  <details> <summary> <b>Proof of the Identity Theorem.</b></summary> <p> Suppose two functions from an open set \(\Omega\) to \(\mathbb{C}\) given by \(f = \sum_{n \in \mathbb{N}} a_nx^n\) and \(g = \sum_{n \in \mathbb{N}} b_nx^n\) agree for all values of a sequence \((z_n)\) which converges to \(z_0\).  Then consider \(h(z) := f-g(z + z_0))\), so that \(h: \{x - z_0: x \in \Omega\} \to \mathbb{C}\) vanishes at all values of a new sequence \((y_n\) which converges to \(0\). <br> <br>
 Obviously \(h = \sum_{n \in \mathbb{N}} (a_n - b_n) x^n\) is now analytic, and we will show it must be zero.  The crux of this proof relies on the idea that there must be some smallest nonzero term.  Suppose that term is \(a_m - b_m\), that is, for all \(n < m\), \(a_n - b_n = 0\).  Then we can write \[h(z) = (a_m-b_m)x^m(1 + j(z)),\] where \(j(z)\) is an analytic function.  By continuity of \(j(z)\) and convergence of \((y_n)\) to zero, we can find some small \(y_k\) for which \(1 + j(y_k) \neq 0\).  But neither is \((a_m - b_m)(y_k)^m\), so we get a contradiction because \(h(y_k)\) was supposed to be zero.<br><br>
 And analytic functions have to be continuous, because they are the uniform limit of continuous functions (polynomials) everywhere inside of \(\Omega\).
 </p> </details>
 Necessary for the proof of Carleson's Interpolation Theorem is that any interpolating sequence will define a linear map \(A:H^{\infty}(\mathbb{D}) \to \ell^\infty(\mathbb{D}).\)  The functional-analytic properties of this map, for example, that it is open, come into play in the proof.
-<br>
+<br><br>
 <p  class="p4"><span class="s1">What we worked on</span></p>
+My group is looking at the sequence \(z_n = (1-\frac{1}{n^p})e^{2 \pi i n \alpha}\) and examining the relationship between \(\alpha\) and \(p\) when \(z_n\) is interpolating.<br> <br>
 So far my group has found that \((z_n)\) is interpolating precisely when \(\alpha\) is Diophantine with exponent \(p\), that is, for all \(p, q \in \mathbb{Z}\) \[|p\alpha - q| \geq p^n.\]
 
 For ease of notation, let \(\Vert \alpha k\Vert\) denote \((|\alpha k - .5| \mod 1) + .5\).
