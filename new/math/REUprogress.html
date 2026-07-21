@@ -101,7 +101,7 @@ since \(r_n < r_{n+k}\) while \(\frac{1}{a+b} < \frac{1}{a}\).  Finally, putting
 \end{align*}
 since \(r_{n+k} > \frac{1}{2}\).  (This makes sense because \(C\) is usually very small).</p> </details> </li>
 
-<li>Finally, we demonstrate the "Carleson Squares Condition", that is, for all arcs \(I \subseteq \mathbb{T}\) with length \(|I|\), we aim to show that \(\sum_{a_n \in S(I)}(1 - |a_n|)\), where \(S(I) := \{r e^{2 \pi i \theta} : \theta \in I, 1-|I| \leq r < 1\}\).  <details> <summary> <b>Proof.</b> </summary> <p>
+<li>Finally, we demonstrate the "Carleson Squares Condition", that is, for all arcs \(I \subseteq \mathbb{T}\) with length \(|I|\), we aim to show that \(\sum_{a_n \in S(I)}(1 - |a_n|) \leq C|I|\), where \(S(I) := \{r e^{2 \pi i \theta} : \theta \in I, 1-|I| \leq r < 1\}\).  <details> <summary> <b>Proof.</b> </summary> <p>
 By our assumption, it takes at least \(\sqrt[p]{\frac{C}{|I|}}\) iterations of the sequence to arrive within \(|I|\) of where it started.  Then \[\sum_{a_n \in S(I)} (1 - |a_n|) = \sum_{a_n \in S(I)} \frac{1}{n^p} \leq K\sum_n\frac{1}{\left(n\sqrt[p]{\frac{C}{|I|}}\right)^p} = \frac{|I|}{C'} \sum \frac{1}{n^p} \leq C'|I|.\]
 
 where the \(K\) which is absorbed by the \(C'\) comes from the Three-Gap problem.
